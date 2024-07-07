@@ -1,0 +1,91 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:cursive 
+}
+html , body{
+   min-height: 100%;
+    min-width: 100%;
+}
+.d-flex{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    gap:1.5vw;
+}
+.d-flex-c{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap:1vw;
+}
+
+main{
+    position:absolute;
+    width:100vw;
+    height:100vh;
+    overflow:hidden;
+}
+.content-container{
+    width:100%;
+    height:300vh;
+    transform: rotate(-20deg);
+}
+
+.slides{
+    width:100%;
+    height:100%;
+}
+.slide{
+    width:250%;
+    height: 40vh;
+}
+.content{
+    width:30vw;
+    height:100%;
+    border-radius:20px;
+    overflow:hidden;
+}
+.content img{
+    width:100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.overlay{
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100vh;
+    background-image: url(/Assets/noise.png);
+}
+.overlay button{
+    padding:1vw 2vw;
+    background-color: transparent;
+    outline:none;
+    border:2px solid white;
+    border-radius:20px;
+    font-size:1.2vw;
+    color:white;
+    cursor:pointer;
+    transition:all  cubic-bezier(0.19, 1, 0.22, 1) 1s;
+}
+button a{
+    text-decoration: none;
+    color:white;
+}
+button:hover{
+    background-color:#ec7a08b3;
+}
+
+.slide1, .slide3, .slide5{
+    transition:transform .5s ease;
+}
+
+.slide2, .slide4{
+    transition:transform .8s ease;
+}
