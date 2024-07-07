@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lobster', cursive;
+}
+html , body{
+   height: 100%;
+    min-width: 100%;
+}
+.container{
+    width:100vw;
+    height:100%;
+    background-color: #1B2735;
+    overflow-x:hidden;
+    position:relative;
+    perspective: 20px;
+}
+.parallax{
+    width:100%;
+    height:100vh;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    position:relative;
+    transform-style: preserve-3d;
+}
+.img-container{
+    width: 100%;
+    height:100%;
+    position:absolute;
+    /* transform:translateZ(-10px) scale(2); */
+}
+.img-container img{
+    width:100%;
+    height:100%;
+    object-fit: cover;
+    object-position:center;
+}
+.content-container{
+    color:#fff;
+    font-size:xxx-large;
+    transform: translateZ(10px);
+}
+.static{
+    height:100vh;
+    background-image: linear-gradient(
+        to bottom,
+        transparent,
+        #1B2735 50px
+    );
+    transform: translateY(-50px);
+    color:#fff;
+    font-size:xxx-large;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.rock1{
+    position:absolute;
+    width:60px;
+    transform: translateZ(17px)
+    translateX(-60px) translateY(90px);
+}
+.rock2{
+    position: absolute;
+    width:90px;
+    transform: translateZ(6px)
+        translateX(80px) translateY(30px)
+    ;
+}
