@@ -15,14 +15,13 @@ html , body{
   flex-direction: column;
   width:100%;
   height:100vh;
-  padding-inline:24px;
   gap:1rem;
   background: linear-gradient(to right, #ff7e5f, #feb47b);
   }
 
 .slider{
-  /* width:calc(var(--width) * var(--quantity)); */
-  width:100%;
+  min-width:calc(var(--width) * var(--quantity));
+  /* width:100%; */
   height:var(--height);
 }
 .slider .list{
@@ -32,22 +31,22 @@ html , body{
   display:flex;
   align-items: center;
   justify-content: space-between;
-  gap:1rem;
   position:relative;
   overflow:hidden;
  mask-image: linear-gradient(to right, transparent, #000 10% 90%, transparent);
 }
 .slider .list .item{
+  /* padding-left: 1.5rem; */
   display:flex;
   align-items: center;
   justify-content: center;
   width:var(--width);
   height:var(--height);
-  flex-shrink: 0;
+  /* flex-shrink: 0; */
   left:100%;
   position:absolute;
   animation:autorun 10s linear infinite;
-  animation-delay:calc((10s / var(--quantity)) * (var(--position) - 1));
+  animation-delay:calc((10s / var(--quantity)) * (var(--position) - 1 ));
 }
 .slider .list .item img{
   width:100%;
