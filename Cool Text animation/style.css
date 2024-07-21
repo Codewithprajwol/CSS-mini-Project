@@ -1,0 +1,101 @@
+@import url(https://fonts.googleapis.com/css?family=Commissioner:100,200,300,regular,500,600,700,800,900);
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:Commissioner;
+}
+html , body{
+   min-height: 100%;
+    min-width: 100%;
+}
+main{
+    display:flex;
+    align-items:center;
+    justify-content: center;
+    height:100vh;
+    width:100%;
+    color:#eee5;
+    background: linear-gradient(to right, #000000, #1a5276);
+}
+
+header{
+    height:5rem;
+    padding-inline:2rem;
+    width:100%; 
+    position:fixed;
+    top:0;
+    left:0;
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+}
+header h3{
+    pointer-events: none;
+}
+header h3::selection{
+    color:hotpink;
+}
+header ul{
+    list-style-type: none;
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+}
+header ul li{
+    margin-left:1rem;
+    cursor:pointer;
+
+}
+@property --rotate{
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+}
+main>h1{
+    font-size:7rem;
+    background-image:conic-gradient(
+        from var(--rotate) at 29% 10%,
+         #0B1012 40%,#F4F7FC55,#0B1012 60%
+    );
+    background-clip: text;
+    -webkit-background-clip: text;
+    color:transparent;
+    animation: rotateLight 3s ease-in-out infinite alternate;
+}
+
+@keyframes rotateLight{
+  from{
+    --rotate: 0.15turn;
+  }
+  to{
+    --rotate: -0.15turn;
+  }
+}
+@property --test{
+    syntax: "<angle>";
+    initial-value:0deg;
+    inherits:false;
+}
+
+main > h5 {
+    font-size: 5rem;
+    background-image: conic-gradient(from var(--test) at right, red, blue);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    align-self: center;
+    margin-top: 1rem;
+    margin-left: 1rem;
+    animation: rotate-gradient 3s ease-in-out infinite alternate;
+}
+
+@keyframes rotate-gradient {
+    from {
+       --test:0.15turn;
+    }
+    to {
+        --test:-0.15turn;
+    }
+}
+
