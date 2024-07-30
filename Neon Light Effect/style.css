@@ -1,0 +1,129 @@
+@import url(https://fonts.googleapis.com/css?family=Poppins:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic);
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:'Poppins';
+}
+html , body{
+   min-height: 100%;
+    min-width: 100%;
+}
+#main{
+    width: 100%;
+    height: 100vh;
+    background-color: #121212; 
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+#main .wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap:3rem;
+}
+.wrapper a{
+    text-decoration:none;
+    text-transform: uppercase;
+    color:#03f45f;
+    font-weight:500;
+    letter-spacing: 4px;
+    font-size:1rem;
+    background-color:transparent;
+    padding:.5rem 1.5rem;
+    position:relative;
+    overflow: hidden;
+    transition:.7s;
+    border-radius: 4px;
+}
+.wrapper a:hover{
+    color:white;    
+    background-color:#03f45f;
+    box-shadow: 
+    0 0 5px #03f45f,   
+    0 0 10px #03f45f,
+    0 0 20px #03f45f,
+    0 0 40px #03f45f,
+    0 0 80px #03f45f;
+    -webkit-box-reflect: below 1px linear-gradient(transparent,#0005 );
+}
+.wrapper a:nth-child(1){
+  filter:hue-rotate(90deg);
+  
+}
+.wrapper a:nth-child(2){
+    filter:hue-rotate(180deg);
+}
+.wrapper a span{
+    position:absolute;
+    background: linear-gradient(90deg,transparent,#03f45f);
+}
+.wrapper a span:nth-child(1){
+    top:0;
+    left:0;
+    height:2px;
+    width:100%;
+    animation: autoplay 1s linear infinite;
+}
+.wrapper a span:nth-child(2){
+    right:0;
+    top:0;
+    height:100%;
+    width:2px;
+    animation: autoplay1 1s linear infinite;
+    animation-delay: .25s;
+}
+.wrapper a span:nth-child(3){
+    bottom:0;
+    right:0;
+    height:2px;
+    width:100%;
+    animation: autoplay2 1s linear infinite;
+    animation-delay: .5s;
+
+}
+.wrapper a span:nth-child(4){
+    bottom:0;
+    left:0;
+    height:100%;
+    width:2px;
+    animation: autoplay3 1s linear infinite;
+    animation-delay: .75s;
+
+}
+
+@keyframes autoplay{
+    0%{
+       left:-100%;
+    }
+    50%,100%{
+        left:100%;
+    }
+}
+
+@keyframes autoplay1{
+    0%{
+       top:-100%;
+    }
+    50%,100%{
+        top:100%;
+    }
+}
+
+@keyframes autoplay2{
+    0%{
+       right:-100%;
+    }
+    50%,100%{
+        right:100%;
+    }
+}
+@keyframes autoplay3{
+    0%{
+       bottom:-100%;
+    }
+    50%,100%{
+        bottom:100%;
+    }
+}
