@@ -1,0 +1,104 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:cursive 
+}
+html , body{
+   min-height: 100%;
+    min-width: 100%;
+}
+body{
+    background-color: #eeeeee;
+}
+#main{
+    width:100%;
+    height:100vh;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+.container{
+    height: 400px;
+    display:flex;
+    flex-wrap:nowrap;
+    justify-content: start;
+}
+.card{
+    width:80px;
+    background-size:cover;
+    cursor:pointer;
+    overflow:hidden;
+    border-radius:2rem;
+    margin:0 10px;
+    display:flex;
+    align-items: flex-end;
+    transition:.6s cubic-bezier(.28, -0.03,0.99);
+    box-shadow:0px 10px 30px -5px rgba(0,0,0,0.8);
+}
+
+.card >.row{
+    color:white;
+    display:flex;
+    flex-wrap:nowrap;
+}
+
+.card> .row > .icon{
+    background:#233;
+    color:white;
+    border-radius:50%;
+    width:50px;
+    display:flex;
+    justify-content: center;
+    align-items:center;
+    margin:15px;
+
+}
+.card > .row > .description{
+    display:flex;
+    justify-content: center;
+    flex-direction:center;
+    flex-direction: column;;
+    overflow:hidden;
+    height:80px;
+    width:520px;
+    opacity:0;
+    transform:translateY(30px);
+    transition-delay:.3s;
+    transition:all .3s ease;
+}
+.description p{
+    color:#b0b0ba;
+    padding-top:5px;
+}
+.description h4{
+    text-transform:uppercase;
+}
+input{
+    display:none;
+}
+#test{
+    background-color: pink;
+}
+ input:checked +  label{
+   width:600px;
+}
+
+input:checked + label .description{
+    opacity:1 !important;
+    transform: translateY(0) !important;
+
+}
+
+[for="C1"]{
+    background-image:url(/radhakrishna1.jpg)
+}
+[for="C2"]{
+    background-image:url(/radhakrishnatwo.jpg)
+}
+[for="C3"]{
+    background-image:url(/radhakrishna3.jpg)
+}
+[for="C4"]{
+    background-image:url(/radhakrishna4.jpg)
+}
