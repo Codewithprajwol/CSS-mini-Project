@@ -1,0 +1,108 @@
+@import url(https://fonts.googleapis.com/css?family=Rubik:300,regular,500,600,700,800,900,300italic,italic,500italic,600italic,700italic,800italic,900italic);
+:root {
+    --Pale-Violet: hsl(276, 100%, 81%);
+    --Moderate: hsl(276, 55%, 52%);
+    --Desaturated: hsl(271, 15%, 43%);
+    --Grayish: hsl(206, 6%, 79%);
+    --Very-Dark: hsl(271, 36%, 24%);
+    --Dark-Grayish: hsl(270, 7%, 64%);
+    --very-light-grayish:hsla(207, 12%, 85%, 0.187);
+
+    --Light-Magenta: hsl(293, 100%, 63%);
+    --Light-Violet: hsl(264, 100%, 61%);
+
+    --White: hsl(0, 0%, 100%);
+    --Light-Grayish: hsl(270, 20%, 96%);
+    --Very-Light-Magenta: hsl(289, 100%, 72%);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:Rubik;
+}
+html , body{
+   min-height: 100%;
+    min-width: 100%;
+}
+main{
+    width:100%;
+    height:100vh;
+    overflow:hidden;
+    position:relative;
+    background-color: var(--Light-Grayish);
+}
+.flag{
+    width:35%;
+    height:90%;
+    background:linear-gradient(to left bottom,var(--Light-Magenta),var(--Light-Violet));
+    position:absolute;
+    border-bottom-left-radius: 50%;
+    border-bottom-right-radius:50%;
+    left:-4.5rem;
+}
+.bottom{
+    width:35%;
+    height:90%;
+    position:absolute;
+    bottom:0;
+    right:-4.5rem;
+    border-top-right-radius: 50%;
+    border-top-left-radius:50%;
+    border-bottom-left-radius: unset;
+    border-bottom-right-radius:unset;
+    background-color:var(--very-light-grayish);
+}
+#hero-section{
+    width:100%;
+    height:100%;
+    position:relative;
+    z-index:1;
+    display:grid;
+    grid-template-columns: repeat(2,1fr);
+    align-content: center;
+    justify-items: end;
+    gap:7rem;
+}
+.mobile{
+    height:500px;
+    width:280px;
+    background-color: var(--White);
+    border-radius:30px;
+    padding:.7rem;
+    position:relative;
+}
+.info{
+    display:flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    gap:1rem;
+}
+.info>h3{
+    font-size:2rem;
+    font-weight:400;
+    color:var(--Desaturated);
+}
+.info>p{
+    width:75%;
+    color:var(--Grayish);
+}
+.mobile-inner-container{
+    width:100%;
+    height:100%;
+    background-color: lightblue;
+    border-radius: inherit;
+}
+.design{
+    position:absolute;
+    background-color: var(--White);
+    /* background-color: yellow; */
+    height:2rem;
+    width:8rem;
+    border-radius:50px;
+    top:1px;
+    left:50%;
+    transform:translateX(-50%);
+}
