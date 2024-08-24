@@ -7,7 +7,7 @@
     --Very-Dark: hsl(271, 36%, 24%);
     --Dark-Grayish: hsl(270, 7%, 64%);
     --very-light-grayish:hsla(207, 12%, 85%, 0.187);
-
+    --comment-background:hsla(263, 7%, 78%, 0.648);
     --Light-Magenta: hsl(293, 100%, 63%);
     --Light-Violet: hsl(264, 100%, 61%);
 
@@ -66,7 +66,7 @@ main{
     gap:7rem;
 }
 .mobile{
-    height:500px;
+    height:520px;
     width:280px;
     background-color: var(--White);
     border-radius:30px;
@@ -92,17 +92,152 @@ main{
 .mobile-inner-container{
     width:100%;
     height:100%;
-    background-color: lightblue;
+    background-color: var(--Light-Grayish);
     border-radius: inherit;
+    overflow: hidden;
 }
 .design{
     position:absolute;
     background-color: var(--White);
-    /* background-color: yellow; */
     height:2rem;
     width:8rem;
     border-radius:50px;
     top:1px;
     left:50%;
     transform:translateX(-50%);
+}
+
+
+/* start of insider mobile design */
+.mobile-nav-bar{
+    height:5rem;
+    width:100%;
+    background: linear-gradient(to left bottom,var(--Light-Magenta),var(--Light-Violet));
+    border-radius: inherit;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    padding-inline:1rem;
+    display:flex;
+    align-items: center;
+    justify-content:flex-start;
+    gap:.5rem;
+    padding-top:1rem;
+}
+.mobile-hero-section{
+    width: 100%;
+    height:100%;
+    background-color: var(--Light-Grayish);
+}
+/* nav bar design */
+.logo-container{
+    width:2.5rem;
+    height:2.5rem;
+    border-radius:50%;
+    overflow: hidden;
+    border:2px solid var(--Light-Grayish);
+}
+.logo-container img{
+    width:100%;
+    height:100%;
+    object-fit: cover;
+    object-position:center;
+}
+.profile-info{
+    line-height:1.1rem;
+    color:var(--Light-Grayish);
+}
+.profile-info h3{
+    font-size:.8rem;
+    font-weight:600;
+}
+.profile-info p{
+    font-size:.7rem;
+    color:var(--Grayish);
+}
+.fa-chevron-left{
+    cursor:pointer;
+    color:var(--White);
+}
+.fa-ellipsis-vertical{
+    margin-left: 2rem;
+    cursor:pointer;
+    color:var(--White);
+}
+
+/*? mobile inside hero section */
+.mobile-hero-section{
+    padding:.7rem;
+    display:grid;
+    gap:.4rem;
+    grid-template-columns: repeat(1,1fr);
+    grid-template-rows:repeat(9,min-content)
+}
+.message-comment{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width:10rem;
+    height:min-content;
+    background-color:var(--comment-background);
+    padding-inline:.5rem;
+    padding-block:.2rem;
+    border-radius: 15px;
+    font-size:.7rem;
+    color:var(--Moderate);
+
+}
+.right{
+        justify-self: right;
+        background-color: var(--White);
+}
+.dog-inner-container{
+    height:3rem;
+    width:3rem;
+    border-radius: 10px;
+    overflow:hidden;
+}
+.dog-inner-container img{
+    width:100%;
+    height:100%;
+    object-fit: cover;
+    object-position: center;
+}
+.images{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap:.3rem;
+}
+.circle{
+    width:1rem;
+    height:1rem;
+    border-radius:50%;
+    border:2px solid white;
+}
+.dog-walk-info{
+    display:flex;
+    align-items: center;
+    justify-content: space-around;
+    color:white;
+    padding:.7rem;
+    background:linear-gradient(to left bottom,var(--Light-Violet),var(--Light-Magenta));
+}
+.input-msg{
+    width:100%;
+    padding:.3rem;
+    background-color:var(--White);
+    color:var(--Dark-Grayish);
+    padding-left:1rem;
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.input-msg>.circle{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    color:var(--White);
+    background-color: black;
+    width:1.5rem;
+    height:1.5rem;
 }
