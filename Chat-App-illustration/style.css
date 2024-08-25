@@ -241,3 +241,46 @@ main{
     width:1.5rem;
     height:1.5rem;
 }
+
+/*TODOS: for media query for tablets  */
+@media (max-width: 670px) {
+    #hero-section {
+        margin-inline: 1.5rem;
+        gap:2rem;
+    }
+    .flag{
+        width:40%;
+    }
+    .bottom{
+        width:40%;
+    }
+}
+
+@media (max-width:580px){
+    #hero-section{
+        grid-template-columns: repeat(1,1fr);
+        justify-items: center;
+        margin:0;
+    }
+    .info{
+        align-items: center;
+         
+    }
+    .flag, .bottom{
+        width:70%;
+        height:60%;
+    }
+    .info{
+    padding-bottom:2rem;
+    }
+    .info>h3{
+        font-weight:500;
+        font-size:2.5rem;
+        color:var(--Very-Dark);
+    }
+    .info>p{
+        text-align: center;
+        line-height:1.5
+    }
+  
+}
